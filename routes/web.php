@@ -58,3 +58,6 @@ Route::get('/hello', [WelcomeController::class,'hello']);
 
 use App\Http\Controllers\PhotoController;
 Route::resource('photos', PhotoController::class);
+
+Route::get('/greeting', [WelcomeController::class, 'greeting']);
+

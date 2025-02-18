@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -52,5 +53,8 @@ Route::get('/user/{name?}', function ($name=null) {
 Route::get('/user/{name?}', function ($name='John') {
     return 'Nama saya '.$name;
 });
-    
-  
+
+Route::get('/hello', [WelcomeController::class,'hello']);
+
+use App\Http\Controllers\PhotoController;
+Route::resource('photos', PhotoController::class);
